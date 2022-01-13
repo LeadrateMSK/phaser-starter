@@ -29,7 +29,5 @@ $ npm run build
 ```
 
 ## Info
-####Bundler Doc:
+##Bundler Doc:
 https://laravel-mix.com/docs/6.0/installation
-####Custom Phaser 3 Doc:
-https://rexrainbow.github.io/phaser3-rex-notes/docs/site/index.html
