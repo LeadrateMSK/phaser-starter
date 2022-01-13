@@ -1,13 +1,40 @@
 import 'phaser';
-import HelloWorldScene from './scenes/HelloWorldScene';
 
-const config = {
+// Other
+import DataBase from './utils/data-base';
+import ProjectColor from './const/project-color';
+
+// Scenes
+import PreloadScene from './scenes/preload-scene';
+import ExampleScene from './scenes/example-scene';
+
+const initGame = (gameWidth, gameHeight, gameContainer) => {
+  const mainGameConfig = {
     type: Phaser.AUTO,
-    parent: 'game',
-    backgroundColor: '#125555',
-    width: 800,
-    height: 600,
-    scene: HelloWorldScene
+    width: gameWidth,
+    height: gameHeight,
+    backgroundColor: ProjectColor.ExampleColor,
+    parent: gameContainer,
+    scale: {
+      mode: Phaser.Scale.FIT,
+      autoCenter: Phaser.Scale.CENTER_BOTH,
+    },
+    physics: {
+      default: 'arcade',
+      arcade: {
+        debug: true,
+        gravity: { y: DataBase.BasicGravityForce },
+      },
+    },
+    scene: [
+      PreloadScene,
+      ExampleScene,
+    ],
+  };
+
+  return new Phaser.Game(mainGameConfig);
 };
 
-const game = new Phaser.Game(config);
+window.addEventListener('load', () => {
+  initGame(DataBase.GameScreenWidth, DataBase.GameScreenHeight, 'phaser-game');
+});
