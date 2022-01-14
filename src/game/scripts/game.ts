@@ -2,7 +2,7 @@ import 'phaser';
 
 // Other
 import { DataBase } from './utils/DataBase';
-import { GameColor } from './const/GameColor';
+import GameColor from './const/GameColor';
 
 // Scenes
 import PreloadScene from './scenes/PreloadScene';
