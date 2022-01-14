@@ -1,19 +1,19 @@
 import 'phaser';
 
 // Other
-import DataBase from './utils/data-base';
-import ProjectColor from './const/project-color';
+import { DataBase } from './utils/DataBase';
+import { GameColor } from './const/GameColor';
 
 // Scenes
-import PreloadScene from './scenes/preload-scene';
-import ExampleScene from './scenes/example-scene';
+import PreloadScene from './scenes/PreloadScene';
+import ExampleScene from './scenes/ExampleScene';
 
 const initGame = (gameWidth, gameHeight, gameContainer) => {
   const mainGameConfig = {
     type: Phaser.AUTO,
     width: gameWidth,
     height: gameHeight,
-    backgroundColor: ProjectColor.ExampleColor,
+    backgroundColor: GameColor.Example,
     parent: gameContainer,
     scale: {
       mode: Phaser.Scale.FIT,
@@ -35,6 +35,6 @@ const initGame = (gameWidth, gameHeight, gameContainer) => {
   return new Phaser.Game(mainGameConfig);
 };
 
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
   initGame(DataBase.GameScreenWidth, DataBase.GameScreenHeight, 'phaser-game');
 });

@@ -1,8 +1,8 @@
 import 'phaser';
-import ExamplePrefab from '../prefabs/example-prefab';
+import ExamplePrefab from '../prefabs/ExamplePrefab';
 
 // Prefabs
-import CounterFPS from '../prefabs/fps-counter';
+import CounterFPS from '../prefabs/CounterFPS';
 
 export default class ExampleScene extends Phaser.Scene {
   fpsCounter;

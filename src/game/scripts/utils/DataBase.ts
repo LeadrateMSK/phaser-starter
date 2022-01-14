@@ -1,4 +1,4 @@
-const DataBase = {
+export const DataBase = {
   GameScreenWidth: 1280,
   GameScreenHeight: 720,
   BasicGravityForce: 500,
@@ -16,5 +16,3 @@ const DataBase = {
     basicSpeed: 700,
   },
 };
-
-export default DataBase;

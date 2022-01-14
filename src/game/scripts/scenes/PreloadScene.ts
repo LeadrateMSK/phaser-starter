@@ -1,4 +1,4 @@
-import SceneRoute from '../const/project-routes';
+import SceneRoute from '../const/GameRouts';
 
 export default class PreloadScene extends Phaser.Scene {
   constructor() {
